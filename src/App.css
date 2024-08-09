@@ -1,38 +1,561 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+@font-face {
+  font-family: "inter";
+  src: url(https://static1.squarespace.com/static/66ab6a34bcf50411ace7edab/t/66acb43f9c6bb940a12c56b2/1722594367525/Inter_24pt-Regular.ttf)
+  };
+  
+  @font-face {
+  font-family: "avenir-regular";
+  src: url(https://static1.squarespace.com/static/66ab6a34bcf50411ace7edab/t/66acb132bc49eb14daa58f1a/1722593586578/AvenirNext-Regular.otf)
+  };
+      
+  @font-face {
+  font-family: "avenir-medium";
+  src: url(https://static1.squarespace.com/static/66ab6a34bcf50411ace7edab/t/66acb1c5bb81c65be0df9b89/1722593733535/AvenirNext-Medium.otf)
+  };
+      
+  @font-face {
+  font-family: "avenir-bold";
+  src: url(https://static1.squarespace.com/static/66ab6a34bcf50411ace7edab/t/66acb16572913f46c7d1c310/1722593637921/AvenirNext-Bold.otf)
+  };
+      
+  p,span{
+  font-family: 'avenir-regular'
+  };
+  /* 
+  // h1,h2,h3,h4,h5,h6{
+  //     font-family: 'avenir-bold'
+  // }; */
+  
+  .page-full-width{
+      width: 100%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .page-width{
+      max-width: 1440px;
+      padding: 0 80px;
+      margin: auto;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .hidden{
+      display: none;
   }
-}
+  
+  body{
+      background: linear-gradient(to right, #004d40, #66bb6a);    
+      margin: 0; 
+      font-size: 16px;
+      color: #f2f2f2;
+  }
+  
+  .grand-background-wrapper{
+      height: 100vh;
+  }
+  /* // HEADER SECTION */
+  
+  header {
+      background: linear-gradient(90deg, rgba(41, 96, 87, 0.30) 0%, rgba(179, 235, 118, 0.20) 100%);
+      backdrop-filter: blur(40px);
+  }
+  .header-wrapper{
+      display: flex;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+  }
+  
+  .Mobile-bar-account{
+      display: none;
+  }
+  
+  .mobile-nav-toggle-label{
+      display: none;
+  }
+  
+  .overlay-nav-wrapper{
+      height: 100%;
+  
+  }
+  .mobile-primary-nav-wrapper{
+      height: 100%;
+  }
+  
+  .mobile-primary-nav-links{
+      display: flex;
+      width: 387px;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+  }
+  a.nav-item-page{
+      color: #f2f2f2;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.44em;
+      text-decoration: none;
+  }
+  
+  
+  /* // ---HERO SECTION--- */
+  
+  .hero-wrapper{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 110px 0;
+  }
+  .hero-content h1{
+      color: #F2F2F2;
+      font-family: "Avenir-bold";
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 68px;
+      letter-spacing: -1.28px;
+  }
+  
+  .hero-content .hero-button-group{
+      display: flex;
+      gap: 40px;
+  }
+  .hero-button-group .hero-button{
+      display: flex;
+      width: 210px;
+      height: 56px;
+      padding: 0px 40px;
+      align-items: center;
+      justify-content: center;
+      gap: 17px;
+      border-radius: 40px;
+      background: #B3EB76;
+  }
+  
+  .hero-button-group .hero-button a{
+      text-decoration: none;
+      color: #2B3533;
+      text-align: center;
+      font-family: "Avenir Next";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 26px;
+      letter-spacing: -0.18px;
+  }
+  .hero-button-group .hero-button p{
+      color: #F2F2F2;
+      font-family: "Avenir-regular";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+  }
+  
+  .hero-profile{
+      display: flex;
+      justify-content: center;
+      position: relative;
+  }
+  
+  .hero-profile .card-profile{
+      position: absolute;
+      display: flex;
+      width: 490px;
+      height: 550px;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 30px;
+      background: #F2F2F2;
+      overflow: hidden;
+      z-index: 100;
+  }
+  
+  .hero-profile .card-profile-image img{
+      width: 100%;
+      object-fit: cover;
+  }
+  
+  
+  .card-profile-content{
+      display: flex;
+      padding: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      flex: 1 0 0;
+      align-self: stretch;
+  }
+  
+  .card-profile-content  .card-subtitle{
+      color: #2B3533;
+      font-family: 'inter';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0.84px;
+      text-transform: uppercase;
+  }
+  
+  .card-profile-content .card-title{
+      color: #2B3533;
+      font-family: "Avenir-bold";
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 52px;
+      letter-spacing: -1.44px;
+      margin: 0;
+  }
+  
+  .card-profile-content  p{
+      color: #2B3533;
+      font-family: "Avenir-regular";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      margin: 0;
+  }
+  
+  .card-profile-content  hr{
+      width: 100%;
+      border: 1px solid #2B3533;
+      margin: 0;
+  }
+  
+  
+  /* // ---VIDEO SECTION--- */
+  .video-background-section{
+      width: 100vw;
+  }
+  
+  .video-background-wrapper{
+      height: 600px;
+      overflow: hidden;
+  }
+  
+  .video-background-wrapper  video{
+      width: 100%;
+      transform: translateY(-15%);
+  }
+  
+  
+  
+  /* // ---TEXT-IMAGE SECTION--- */
+  .text-image-section{
+      background: linear-gradient(180deg, #2B3533 0%, #151D1B 100%);
+  }
+  
+  .text-image-wrapper{
+      height: 760px;
+  }
+  
+  .text-image-content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: relative;
+  }
+  
+  .text-image-content .image-1{
+      width: 370px;
+      height: 260px;
+      position: absolute;
+      top: -180px;
+      left: 80px;
+  }
+  
+  .text-image-content .image-1 img{
+      width: 100%;;
+  }
+  
+  .text-content h1{
+  
+      color: #F2F2F2;
+      font-family: "Avenir-bold";
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 68px;
+      letter-spacing: -1.28px;
+      width: 890px;
+  }
+  
+  .image-2{
+      width: 280px;
+      height: 262px;
+      position: absolute;
+      bottom: 120px;
+      right: 80px;
+  }
+  
+  .image-2 img{
+      width: 100%;
+  }
+  
+  
+  
+  /* // ---FAQ SECTION--- */
+  .faq-section{
+      background: linear-gradient(180deg, #2B3533 0%, #151D1B 100%);
+      padding-top: 8.25rem;
+      padding-bottom: 5rem;
+  }
+  
+  .faq-wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+  }
+  
+  .faq-accordion{
+      border-radius: 1.875rem;
+      background: #384E4E;
+  }
+  .accordion-active{
+      background: #B3EB76;
+  }
+  
+  
+  .accordion-active .faq-accordion-title h2{
+      color: #2B3533;
+  }
+  
+  
+  .faq-accordion-item{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      padding: 3.75rem;
+      align-items: start;
+      cursor: pointer;
+  }
+  
+  .faq-accordion-title{
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+  }
+  
+  .faq-accordion-title img{
+      width: 4.6875rem;
+      height: 4.6875rem;
+  }
+  
+  .faq-accordion-title h2{
+      color: #F2F2F2;
+      font-family: "Avenir Next";
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.7em;
+      letter-spacing: -0.8px;
+      margin: 0;
+  }
+              
+  
+  .faq-accordion-content{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-in-out;
+  }
+  
+  .faq-accordion-content p {
+      color: #2B3533;
+      font-family: "Avenir Next";
+      font-size: 1.1875rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.625rem;
+      margin: 0;
+  }
+  
+  .faq-accordion-content button {
+      display: flex;
+      width: 10.5625em;
+      height: 2.9375em;
+      padding: 0px 2.5em;
+      align-items: center;
+      border-radius: 2.5em;
+      background: #2B3533;
+      color: #B3EB76;
+      text-align: center;
+      font-family: "Avenir Next";
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.625em;
+      letter-spacing: -0.16px;
+  }
+      
+  
+  /* // ---BRAND SECTION--- */
+  .brand-section{
+      background: #161E1C;
+  }
+  
+  .brand-wrapper{
+      padding-bottom: 120px;
+  }
+  
+  .brand-logos{
+      display: flex;
+      justify-content: space-between;
+      height: 556px;
+  }
+  
+  .brand-logo{
+      display: flex;
+      width: 39rem;
+      height: fit-content;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      height: 100%;
+      z-index: 10;
+  }
+  
+  .brand-logo .brand-logo-card{
+      position: absolute;
+      border-radius: 1.875rem;
+      overflow: hidden;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .brand-logo img{
+      width: 100%;
+      object-fit: cover;
+  }
+  
+  .brand-logo .brand-desc{
+      display: flex;
+      padding: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      flex: 1 0 0;
+      align-self: stretch;
+      background: #F2F2F2;
+  
+  }
+  
+  .brand-logo:first-child .brand-logo-card{
+      top: -25%;
+  }
+  .brand-logo:first-child .brand-desc .brand-subtitle{
+      color: #2B3533;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0.84px;
+      text-transform: uppercase;
+  }
+  
+  .brand-logo:first-child .brand-desc .brand-title{
+      color: #2B3533;
+      font-family: "Avenir Next";
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 52px;
+      letter-spacing: -1.44px;
+      margin: 0;
+  }
+  
+  .brand-logo:first-child .brand-desc p{
+      color: #2B3533;
+      font-family: "Avenir Next";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      margin: 0;
+  }
+  
+  .brand-desc hr{
+      width: 100%;
+      border: 1px solid #2B3533;
+      margin: 0;
+  }
+  
+  .brand-logo:nth-child(2),
+  .brand-logo:nth-child(3){
+      width: 17.875rem;
+  }
+  
+  
+  .brand-logo:nth-child(2) .brand-logo-card{
+      bottom: 0%;
+  }
+  
+  .brand-logo:nth-child(3) .brand-logo-card{
+      bottom: 10%;
+  }
+  
+  .brand-logo:nth-child(2) .brand-subtitle,
+  .brand-logo:nth-child(3) .brand-subtitle{
+      color: #2B3533;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0.84px;
+      text-transform: uppercase;
+  }
+  
+  .brand-logo:nth-child(2) .brand-title,
+  .brand-logo:nth-child(3) .brand-title{
+      color: #2B3533;
+      font-family: "Avenir Next";
+      font-size: 27px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 27px;
+      letter-spacing: -0.81px;
+      margin: 0;
+  }
+  
+  .brand-logo:nth-child(2) p,
+  .brand-logo:nth-child(3) p{
+      color: #2B3533;
+      font-family: "Avenir Next";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      margin: 0;
+  }
+  
+  
+  /* // ---HERO-2 SECTION--- */
+  .hero-2{
+      background: linear-gradient(62deg, #B3EB76 -13.32%, #82BA6B 9.73%, #588F62 29.53%, #296057 51.61%);
+  }
+  
+  .hero-2 .hero-profile{
+      height: 755px;
+  }
+  .hero-2 .hero-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 35px;
+  }
+  
+  .hero-2 .card-profile{
+      top: -59%;
+      width: unset;
+      height: unset;
+      background: transparent;
+  }
