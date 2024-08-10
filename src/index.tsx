@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './fonts/AvenirNext-Bold.otf';
+import './fonts/AvenirNext-Medium.otf';
+import './fonts/AvenirNext-Regular.otf';
+import './fonts/Inter_18pt-Regular.ttf';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

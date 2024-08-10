@@ -1,33 +1,8 @@
 
-
-
-@font-face {
-  font-family: "inter";
-  src: url(https://static1.squarespace.com/static/66ab6a34bcf50411ace7edab/t/66acb43f9c6bb940a12c56b2/1722594367525/Inter_24pt-Regular.ttf)
-  };
-  
-  @font-face {
-  font-family: "avenir-regular";
-  src: url(https://static1.squarespace.com/static/66ab6a34bcf50411ace7edab/t/66acb132bc49eb14daa58f1a/1722593586578/AvenirNext-Regular.otf)
-  };
-      
-  @font-face {
-  font-family: "avenir-medium";
-  src: url(https://static1.squarespace.com/static/66ab6a34bcf50411ace7edab/t/66acb1c5bb81c65be0df9b89/1722593733535/AvenirNext-Medium.otf)
-  };
-      
-  @font-face {
-  font-family: "avenir-bold";
-  src: url(https://static1.squarespace.com/static/66ab6a34bcf50411ace7edab/t/66acb16572913f46c7d1c310/1722593637921/AvenirNext-Bold.otf)
-  };
       
   p,span{
-  font-family: 'avenir-regular'
+  font-family: 'AvenirNext-Regular'
   };
-  /* 
-  // h1,h2,h3,h4,h5,h6{
-  //     font-family: 'avenir-bold'
-  // }; */
   
   .page-full-width{
       width: 100%;
@@ -57,46 +32,130 @@
   header {
       background: linear-gradient(90deg, rgba(41, 96, 87, 0.30) 0%, rgba(179, 235, 118, 0.20) 100%);
       backdrop-filter: blur(40px);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        top: 0;
   }
   .header-wrapper{
       display: flex;
       justify-content: space-between;
       padding: 1.25rem 2.5rem;
   }
-  
-  .Mobile-bar-account{
-      display: none;
+
+  .header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+  }
+
+  .header-logo,
+  .header-logo img{
+    height: 100%;
+  }
+
+  .header-menu-list{
+    display: flex;
+    gap: 40px;
+  }
+
+  .menu-item{
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #f2f2f2;
+    transition: width 0.3s ease-in-out;
   }
   
-  .mobile-nav-toggle-label{
-      display: none;
+  .menu-item:hover::after {
+    width: 100%;
+  }
+
+  .menu-item-title{
+    font-family: 'AvenirNext-Medium';
+  }
+
+
+  /* MEGA-MENU DROPDOWN */
+
+  .mega-menu:hover .menu-dropdown{
+    display: block;
+  }
+
+  .menu-dropdown{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+  }
+
+  .menu-dropdown__container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 644px;
+    padding: 30px;
+    align-items: flex-start;
+    gap: 30px;
+    border-radius: 20px;
+    background: var(--Forest-Green, #122E18);
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.45);
+  }
+
+  .menu-dropdown__item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .menu-dropdown__item:hover .menu-item__icon svg path,
+  .menu-dropdown__item:hover .menu-item__title h1,
+  .menu-dropdown__item:hover .menu-item__title span{
+    color: #f2f2f2;
+    fill: #f2f2f2;
+  }
+
+  .menu-item__title h1{
+    color: var(--Yellow, #F1B257);
+    font-family: 'AvenirNext-Medium';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 24px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .menu-item__title span{
+    color: var(--Yellow, #F1B257);
+    font-family: "AvenirNext-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 1.26px;
+  }
+
+  /* MAIN */
+  main{
+    margin-top: 90px
   }
   
-  .overlay-nav-wrapper{
-      height: 100%;
   
-  }
-  .mobile-primary-nav-wrapper{
-      height: 100%;
-  }
-  
-  .mobile-primary-nav-links{
-      display: flex;
-      width: 387px;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-  }
-  a.nav-item-page{
-      color: #f2f2f2;
-      font-size: 1.125rem;
-      font-weight: 500;
-      line-height: 1.44em;
-      text-decoration: none;
-  }
   
   
   /* // ---HERO SECTION--- */
+
   
   .hero-wrapper{
       display: grid;
@@ -105,7 +164,7 @@
   }
   .hero-content h1{
       color: #F2F2F2;
-      font-family: "Avenir-bold";
+      font-family: "AvenirNext-Bold";
       font-size: 64px;
       font-style: normal;
       font-weight: 700;
@@ -133,7 +192,7 @@
       text-decoration: none;
       color: #2B3533;
       text-align: center;
-      font-family: "Avenir Next";
+      font-family: "AvenirNext-Regular";
       font-size: 18px;
       font-style: normal;
       font-weight: 700;
@@ -142,7 +201,7 @@
   }
   .hero-button-group .hero-button p{
       color: #F2F2F2;
-      font-family: "Avenir-regular";
+      font-family: "AvenirNext-Regular";
       font-size: 20px;
       font-style: normal;
       font-weight: 500;
@@ -189,7 +248,7 @@
   
   .card-profile-content  .card-subtitle{
       color: #2B3533;
-      font-family: 'inter';
+      font-family: 'Inter';
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
@@ -200,7 +259,7 @@
   
   .card-profile-content .card-title{
       color: #2B3533;
-      font-family: "Avenir-bold";
+      font-family: "AvenirNext-Bold";
       font-size: 48px;
       font-style: normal;
       font-weight: 800;
@@ -211,7 +270,7 @@
   
   .card-profile-content  p{
       color: #2B3533;
-      font-family: "Avenir-regular";
+      font-family: "AvenirNext-Regular";
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
@@ -275,7 +334,7 @@
   .text-content h1{
   
       color: #F2F2F2;
-      font-family: "Avenir-bold";
+      font-family: "AvenirNext-Bold";
       font-size: 64px;
       font-style: normal;
       font-weight: 700;
@@ -346,7 +405,7 @@
   
   .faq-accordion-title h2{
       color: #F2F2F2;
-      font-family: "Avenir Next";
+      font-family: "AvenirNext-Regular";
       font-size: 2.5rem;
       font-style: normal;
       font-weight: 700;
@@ -368,7 +427,7 @@
   
   .faq-accordion-content p {
       color: #2B3533;
-      font-family: "Avenir Next";
+      font-family: "AvenirNext-Regular";
       font-size: 1.1875rem;
       font-style: normal;
       font-weight: 600;
@@ -386,7 +445,7 @@
       background: #2B3533;
       color: #B3EB76;
       text-align: center;
-      font-family: "Avenir Next";
+      font-family: "AvenirNext-Regular";
       font-size: 1rem;
       font-style: normal;
       font-weight: 700;
@@ -452,7 +511,7 @@
   }
   .brand-logo:first-child .brand-desc .brand-subtitle{
       color: #2B3533;
-      font-family: Inter;
+      font-family: 'Inter';
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
@@ -463,7 +522,7 @@
   
   .brand-logo:first-child .brand-desc .brand-title{
       color: #2B3533;
-      font-family: "Avenir Next";
+      font-family: "AvenirNext-Regular";
       font-size: 48px;
       font-style: normal;
       font-weight: 700;
@@ -474,7 +533,7 @@
   
   .brand-logo:first-child .brand-desc p{
       color: #2B3533;
-      font-family: "Avenir Next";
+      font-family: "AvenirNext-Regular";
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
@@ -505,7 +564,7 @@
   .brand-logo:nth-child(2) .brand-subtitle,
   .brand-logo:nth-child(3) .brand-subtitle{
       color: #2B3533;
-      font-family: Inter;
+      font-family: 'Inter';
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
@@ -517,7 +576,7 @@
   .brand-logo:nth-child(2) .brand-title,
   .brand-logo:nth-child(3) .brand-title{
       color: #2B3533;
-      font-family: "Avenir Next";
+      font-family: "AvenirNext-Regular";
       font-size: 27px;
       font-style: normal;
       font-weight: 700;
@@ -529,7 +588,7 @@
   .brand-logo:nth-child(2) p,
   .brand-logo:nth-child(3) p{
       color: #2B3533;
-      font-family: "Avenir Next";
+      font-family: "AvenirNext-Regular";
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
