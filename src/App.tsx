@@ -4,22 +4,8 @@ import "./App.css";
 import FAQCompoent from "./components/faq";
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAdscPliky2kBxB_DFHN1ScTULU7SMm6e0",
-  authDomain: "stratfield-react.firebaseapp.com",
-  projectId: "stratfield-react",
-  storageBucket: "stratfield-react.appspot.com",
-  messagingSenderId: "628875573897",
-  appId: "1:628875573897:web:f147035a32181eb67f6458",
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
 
 function App() {
   useEffect(() => {
