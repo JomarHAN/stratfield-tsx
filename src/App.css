@@ -323,7 +323,7 @@
       width: 370px;
       height: 260px;
       position: absolute;
-      top: -180px;
+      top: -260px;
       left: 80px;
   }
   
@@ -332,9 +332,8 @@
   }
   
   .text-content h1{
-  
       color: #F2F2F2;
-      font-family: "AvenirNext-Bold";
+      font-family: "AvenirNext-Medium";
       font-size: 64px;
       font-style: normal;
       font-weight: 700;
@@ -343,11 +342,11 @@
       width: 890px;
   }
   
-  .image-2{
+  .text-image-content .image-2{
       width: 280px;
       height: 262px;
       position: absolute;
-      bottom: 120px;
+      bottom: 85px;
       right: 80px;
   }
   
