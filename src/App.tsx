@@ -216,7 +216,7 @@ function App() {
             <div className="page-width">
               <div className="hero-wrapper">
                 <div className="hero-content">
-                  <h1>Expertise and agility for a changing world.</h1>
+                  <h1>It's time to rethink business as usual.</h1>
                   <div className="hero-button-group">
                     <div className="hero-button">
                       <a href="#" className="button">
@@ -232,11 +232,17 @@ function App() {
                       <img src="men.png" alt="Hero card" />
                     </div>
                     <div className="card-profile-content">
-                      <span className="card-subtitle">PRACTICE AREA</span>
+                      {/* <span className="card-subtitle">PRACTICE AREA</span> */}
                       <h1 className="card-title">
-                        Content headline would go here.
+                        Trusted Relationships. Meaningful Results.
                       </h1>
-                      <p>Lorem ipsum dolor sit amet consectetur.</p>
+                      <p>
+                        Unlike larger consulting firms, we use small and agile
+                        teams trained to operate in all business environments.
+                        Our professionals work closely with your team to develop
+                        business strategies, execute projects flawlessly, and
+                        ensure smooth operations.
+                      </p>
                       <hr />
                     </div>
                   </div>
