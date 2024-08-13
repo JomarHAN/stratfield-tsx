@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from "react";
 import "./App.css";
-import FAQCompoent from "./components/faq";
+import FAQComponent from "./components/faq";
 
 // Import the functions you need from the SDKs you need
 // TODO: Add SDKs for Firebase products that you want to use
@@ -112,7 +112,7 @@ function App() {
                           </svg>
                         </div>
                         <div className="menu-item__title">
-                          <h1>MARKETING</h1>
+                          <h1>Staffing</h1>
                         </div>
                       </div>
                       <div className="menu-dropdown__item">
@@ -190,6 +190,9 @@ function App() {
                 <div className="menu-item" id="careers">
                   <span className="menu-item-title">Careers</span>
                 </div>
+                <div className="menu-item button-menu" id="careers">
+                  <span className="menu-item-title">Contact us</span>
+                </div>
               </div>
             </div>
           </div>
@@ -206,10 +209,9 @@ function App() {
                   <div className="hero-button-group">
                     <div className="hero-button">
                       <a href="#" className="button">
-                        Contact us
+                        Get in touch
                       </a>
                     </div>
-                    <p>Let's work together</p>
                   </div>
                 </div>
                 <div className="hero-profile">
@@ -254,9 +256,9 @@ function App() {
             <div className="page-width">
               <div className="text-image-wrapper">
                 <div className="text-image-content">
-                  <div className="image-1  parallax-card">
+                  {/* <div className="image-1  parallax-card">
                     <img src="image-1.png" alt="chart" />
-                  </div>
+                  </div> */}
                   <div className="text-content">
                     <h1>
                       Our team of experts specializes in providing consulting
@@ -264,16 +266,16 @@ function App() {
                       to achieve real results.
                     </h1>
                   </div>
-                  <div className="image-2  parallax-card">
+                  {/* <div className="image-2  parallax-card">
                     <img src="image-2.png" alt="women" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
           </div>
 
           {/* <!-- FAQ SECTION  --> */}
-          <FAQCompoent />
+          <FAQComponent />
 
           {/* <!-- BRAND SECTION --> */}
           <div className="brand-section">

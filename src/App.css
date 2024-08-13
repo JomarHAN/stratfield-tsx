@@ -1,7 +1,7 @@
 
       
   p,span{
-  font-family: 'AvenirNext-Regular'
+  font-family: 'Avenir Next'
   };
   
   .page-full-width{
@@ -58,6 +58,7 @@
 
   .header-menu-list{
     display: flex;
+    align-items: center;
     gap: 40px;
   }
 
@@ -82,8 +83,35 @@
   }
 
   .menu-item-title{
-    font-family: 'AvenirNext-Medium';
+    text-align: center;
+    font-family: "Avenir Next";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -0.14px;
+    width: 100%;
   }
+
+  .menu-item.button-menu:after{
+    width: 0%;
+  }
+
+  .button-menu{
+    border-radius: 40px;
+    background: #B3EB76;
+    display: flex;
+    width: 166px;
+    height: 36px;
+    align-items: center;
+    gap: 17px;
+  }
+
+  .button-menu .menu-item-title{
+    color: #2B3533;
+  }
+
+
 
 
   /* MEGA-MENU DROPDOWN */
@@ -164,7 +192,7 @@
   }
   .hero-content h1{
       color: #F2F2F2;
-      font-family: "AvenirNext-Bold";
+      font-family: "Avenir Next";
       font-size: 64px;
       font-style: normal;
       font-weight: 700;
@@ -192,7 +220,7 @@
       text-decoration: none;
       color: #2B3533;
       text-align: center;
-      font-family: "AvenirNext-Regular";
+      font-family: "Avenir Next";
       font-size: 18px;
       font-style: normal;
       font-weight: 700;
@@ -201,7 +229,7 @@
   }
   .hero-button-group .hero-button p{
       color: #F2F2F2;
-      font-family: "AvenirNext-Regular";
+      font-family: "Avenir Next";
       font-size: 20px;
       font-style: normal;
       font-weight: 500;
@@ -221,11 +249,10 @@
       position: absolute;
       display: flex;
       width: 488px;
-      /* height: 550px; */
+      background: #DDF9D3;
       flex-direction: column;
       align-items: flex-start;
       border-radius: 30px;
-      background: #F2F2F2;
       overflow: hidden;
       z-index: 100;
   }
@@ -270,7 +297,7 @@
   
   .card-profile-content  p{
       color: #2B3533;
-      font-family: "AvenirNext-Regular";
+      font-family: "Avenir Next";
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
@@ -332,14 +359,14 @@
   }
   
   .text-content h1{
-      color: #F2F2F2;
-      font-family: "AvenirNext-Medium";
+      color: #DDF9D3;
+      font-family: "Avenir Next";
       font-size: 64px;
       font-style: normal;
       font-weight: 700;
       line-height: 68px;
       letter-spacing: -1.28px;
-      width: 890px;
+      max-width: 1030px;
   }
   
   .text-image-content .image-2{
@@ -372,10 +399,15 @@
   .faq-accordion{
       border-radius: 1.875rem;
       background: #384E4E;
+      transition: all 0.2s ease-in-out;
   }
-  .accordion-active{
-      background: #B3EB76;
-  }
+  .faq-accordion:hover{
+      background: #3f5757;
+    }
+
+    .faq-accordion.accordion-active{
+        background: #B3EB76 !important;
+      }
   
   
   .accordion-active .faq-accordion-title h2{
@@ -389,6 +421,7 @@
       padding: 3.75rem;
       align-items: start;
       cursor: pointer;
+      gap: 1.25rem;
   }
   
   .faq-accordion-title{
@@ -405,14 +438,21 @@
     box-sizing: border-box;
   }
   
-  .faq-accordion-title img{
+  .faq-accordion__icon-box svg{
       width: 100%;
+      height: 100%;
+  }
+  .faq-accordion__icon-box svg path{
+      fill: #DDF9D3;
+  }
+  .accordion-active .faq-accordion__icon-box svg path{
+    fill: #B3EB76;
   }
   
   .faq-accordion-title h2{
-      color: #F2F2F2;
-      font-family: "AvenirNext-Regular";
-      font-size: 2.5rem;
+      color: #DDF9D3;
+      font-family: "Avenir Next";
+      font-size: 2.3rem;
       font-style: normal;
       font-weight: 700;
       line-height: 1.7em;
@@ -433,7 +473,7 @@
   
   .faq-accordion-content p {
       color: #2B3533;
-      font-family: "AvenirNext-Regular";
+      font-family: "Avenir Next";
       font-size: 1.1875rem;
       font-style: normal;
       font-weight: 600;
@@ -451,7 +491,7 @@
       background: #2B3533;
       color: #B3EB76;
       text-align: center;
-      font-family: "AvenirNext-Regular";
+      font-family: "Avenir Next";
       font-size: 1rem;
       font-style: normal;
       font-weight: 700;
@@ -508,7 +548,7 @@
       gap: 20px;
       flex: 1 0 0;
       align-self: stretch;
-      background: #F2F2F2;
+      background: #DDF9D3;
   
   }
   
@@ -528,7 +568,7 @@
   
   .brand-logo:first-child .brand-desc .brand-title{
       color: #2B3533;
-      font-family: "AvenirNext-Regular";
+      font-family: "Avenir Next";
       font-size: 48px;
       font-style: normal;
       font-weight: 700;
@@ -539,7 +579,7 @@
   
   .brand-logo:first-child .brand-desc p{
       color: #2B3533;
-      font-family: "AvenirNext-Regular";
+      font-family: "Avenir Next";
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
@@ -582,7 +622,7 @@
   .brand-logo:nth-child(2) .brand-title,
   .brand-logo:nth-child(3) .brand-title{
       color: #2B3533;
-      font-family: "AvenirNext-Regular";
+      font-family: "Avenir Next";
       font-size: 27px;
       font-style: normal;
       font-weight: 700;
@@ -594,7 +634,7 @@
   .brand-logo:nth-child(2) p,
   .brand-logo:nth-child(3) p{
       color: #2B3533;
-      font-family: "AvenirNext-Regular";
+      font-family: "Avenir Next";
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
