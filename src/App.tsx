@@ -222,7 +222,7 @@ function App() {
                     <div className="card-profile-content">
                       {/* <span className="card-subtitle">PRACTICE AREA</span> */}
                       <h1 className="card-title">
-                        Trusted Relationships Meaningful Results.
+                        Trusted Relationships Meaningful Results
                       </h1>
                       <p>
                         Unlike larger consulting firms, we use small and agile

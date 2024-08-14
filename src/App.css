@@ -285,14 +285,14 @@
   }
   
   .card-profile-content .card-title{
-      color: #2B3533;
-      font-family: "AvenirNext-Medium";
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 800;
-      line-height: 52px;
-      letter-spacing: -1.44px;
-      margin: 0;
+    color: #2B3533;
+    font-family: "Avenir Next";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -1.44px;
+    margin: 0;
   }
   
   .card-profile-content  p{
